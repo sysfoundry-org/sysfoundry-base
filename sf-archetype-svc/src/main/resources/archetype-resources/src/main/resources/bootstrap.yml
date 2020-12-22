@@ -1,0 +1,11 @@
+spring:
+  flyway:
+    enabled: false
+  application:
+    name: ${artifactId}
+  cloud:
+    consul:
+      config:
+        format: YAML
+        enabled: true
+        prefix: service-config
