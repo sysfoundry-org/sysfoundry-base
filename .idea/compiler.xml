@@ -11,12 +11,14 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="sf-archetype-svc" />
+        <module name="sf-lib-configkeys" />
         <module name="sf-lib-security-keycloak" />
         <module name="sf-svc-portal" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="sf-archetype-svc" target="1.8" />
+      <module name="sf-lib-configkeys" target="1.8" />
       <module name="sf-lib-security-keycloak" target="8" />
       <module name="sf-svc-portal" target="1.8" />
       <module name="sysfoundry-base" target="1.5" />
@@ -24,6 +26,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="sf-lib-configkeys" options="-parameters" />
       <module name="sf-lib-security-keycloak" options="-parameters" />
       <module name="sf-svc-portal" options="-parameters" />
     </option>

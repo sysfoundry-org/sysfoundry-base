@@ -104,7 +104,7 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
                     <jvmArguments>
-                        -Disis.security.logout.external=true
+                        -Disis.security.logout.external=true -Dsf.solution.name=xyz-solution
                     </jvmArguments>
                     <excludes>
                         <exclude>
@@ -221,6 +221,12 @@
         <dependency>
             <groupId>org.sysfoundry</groupId>
             <artifactId>sf-lib-security-keycloak</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.sysfoundry</groupId>
+            <artifactId>sf-lib-configkeys</artifactId>
             <version>${project.version}</version>
         </dependency>
     </dependencies>

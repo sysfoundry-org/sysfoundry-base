@@ -22,6 +22,7 @@
         <module>sf-lib-security-keycloak</module>
         <module>sf-svc-portal</module>
         <module>sf-archetype-svc</module>
+        <module>sf-lib-configkeys</module>
     </modules>
 
     <dependencyManagement>

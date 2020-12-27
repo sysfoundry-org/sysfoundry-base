@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/sf-archetype-svc/sf-archetype-svc.iml" filepath="$PROJECT_DIR$/sf-archetype-svc/sf-archetype-svc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sf-lib-configkeys/sf-lib-configkeys.iml" filepath="$PROJECT_DIR$/sf-lib-configkeys/sf-lib-configkeys.iml" />
       <module fileurl="file://$PROJECT_DIR$/sf-lib-security-keycloak/sf-lib-security-keycloak.iml" filepath="$PROJECT_DIR$/sf-lib-security-keycloak/sf-lib-security-keycloak.iml" />
       <module fileurl="file://$PROJECT_DIR$/sf-svc-portal/sf-svc-portal.iml" filepath="$PROJECT_DIR$/sf-svc-portal/sf-svc-portal.iml" />
       <module fileurl="file://$PROJECT_DIR$/sysfoundry-base.iml" filepath="$PROJECT_DIR$/sysfoundry-base.iml" />

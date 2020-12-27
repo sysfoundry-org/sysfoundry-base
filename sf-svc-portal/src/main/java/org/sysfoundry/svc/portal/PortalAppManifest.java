@@ -1,5 +1,6 @@
 package org.sysfoundry.svc.portal;
 
+import org.sysfoundry.configkeys.SFModuleConfigKeys;
 import org.sysfoundry.svc.portal.health.HealthCheckServiceImpl;
 import org.sysfoundry.svc.portal.impl.PortalServiceImpl;
 import org.sysfoundry.svc.portal.menu.AccountMenu;
@@ -36,12 +37,15 @@ import org.springframework.context.annotation.PropertySources;
         HealthCheckServiceImpl.class,
         AccountMenu.class,
         PortalServiceImpl.class,
-        Config.class
+        Config.class,
 
         //ApplicationModule.class,
 
         // discoverable fixtures
         //DomainAppDemo.class
+
+        //Include the config key module
+        SFModuleConfigKeys.class
 })
 @PropertySources({
         @PropertySource(IsisPresets.DebugDiscovery),

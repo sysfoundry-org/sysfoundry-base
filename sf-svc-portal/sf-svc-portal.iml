@@ -286,6 +286,7 @@
     <orderEntry type="library" name="Maven: org.keycloak:keycloak-adapter-core:11.0.3" level="project" />
     <orderEntry type="library" name="Maven: org.bouncycastle:bcprov-jdk15on:1.65" level="project" />
     <orderEntry type="library" name="Maven: org.apache.isis.core:isis-core-security:2.0.0-SNAPSHOT" level="project" />
+    <orderEntry type="module" module-name="sf-lib-configkeys" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.projectlombok:lombok:1.18.16" level="project" />
   </component>
 </module>

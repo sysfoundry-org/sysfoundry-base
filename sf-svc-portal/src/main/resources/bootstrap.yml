@@ -2,10 +2,10 @@ spring:
   flyway:
     enabled: false
   application:
-    name: simpleapp
+    name: ${sf.solution.name:example}
   cloud:
     consul:
       config:
         format: YAML
         enabled: true
-        prefix: service-config
+        prefix: ${sf.solution.name}/service-config
