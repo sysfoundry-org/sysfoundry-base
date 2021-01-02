@@ -23,6 +23,7 @@
         <module>sf-svc-portal</module>
         <module>sf-archetype-svc</module>
         <module>sf-lib-configkeys</module>
+        <module>sf-doc</module>
     </modules>
 
     <dependencyManagement>
