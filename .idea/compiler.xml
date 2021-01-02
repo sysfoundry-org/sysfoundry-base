@@ -14,12 +14,11 @@
         <module name="sf-lib-configkeys" />
         <module name="sf-lib-security-keycloak" />
         <module name="sf-svc-portal" />
-        <module name="sf-doc" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="sf-archetype-svc" target="1.8" />
-      <module name="sf-doc" target="1.8" />
+      <module name="sf-doc" target="11" />
       <module name="sf-lib-configkeys" target="1.8" />
       <module name="sf-lib-security-keycloak" target="8" />
       <module name="sf-svc-portal" target="1.8" />

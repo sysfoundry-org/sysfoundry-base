@@ -15,9 +15,9 @@
 #  specific language governing permissions and limitations
 #  under the License.
 
-name: sysfoundry-org
-title: "Sysfoundry"
+name: sysfoundry-base
+title: "Sysfoundry Base"
 version: latest
-start_page: ROOT:about.adoc
+start_page: ROOT:index.adoc
 nav:
 - modules/ROOT/nav.adoc
