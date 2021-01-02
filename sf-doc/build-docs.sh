@@ -1,1 +1,0 @@
-antora --fetch docs-site.yml
