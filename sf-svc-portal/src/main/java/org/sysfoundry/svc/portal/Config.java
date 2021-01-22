@@ -25,4 +25,15 @@ public class Config {
      */
     private boolean viewAppsWithGui = true;
 
+
+    /**
+     * Relative url path for the Solution's help content
+     */
+    private String helpPath = "docs";
+
+    /**
+     * Help not found page relative path
+     */
+    private String helpNotFoundErrorPagePath = "help_not_found.html";
+
 }

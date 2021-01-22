@@ -104,7 +104,7 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
                     <jvmArguments>
-                        -Disis.security.logout.external=true -Dsf.solution.name=xyz-solution
+                        -Disis.security.logout.external=true -Dsf.solution.name=xyz-solution -Dsf.solution.doc.location=.
                     </jvmArguments>
                     <excludes>
                         <exclude>

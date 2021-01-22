@@ -7,6 +7,7 @@ import javax.servlet.ServletContextListener;
 import javax.servlet.ServletException;
 
 import lombok.extern.slf4j.Slf4j;
+import org.apache.isis.core.config.IsisConfiguration;
 import org.keycloak.adapters.KeycloakDeployment;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.core.annotation.Order;
@@ -35,16 +36,20 @@ public final class WebModuleKeycloak extends WebModuleAbstract {
     @Getter
     private final String name = "Keycloak";
 
+    private final IsisConfiguration isisConfiguration;
+
     @Inject
     public WebModuleKeycloak(ServiceInjector serviceInjector,
                              //note ensure that the KeycloakDeployment is injected to ensure that the
                              //static globalkeycloakdeployment object is initialized
-                             KeycloakDeployment keycloakDeployment//,
+                             KeycloakDeployment keycloakDeployment,
+                             final IsisConfiguration isisConfiguration
                              //to ensure that the AdapterConfig is injected in the global static constant
                              //AdapterConfig keycloakAdapterConfig
                              ) {
         super(serviceInjector);
 
+        this.isisConfiguration = isisConfiguration;
         /*log.info("$$$$$$$$Adapter Config {}",keycloakAdapterConfig);
         log.info("Security Realm {}",keycloakAdapterConfig.getRealm());
         log.info("auth-server-url {}",keycloakAdapterConfig.getAuthServerUrl());*/
@@ -54,13 +59,15 @@ public final class WebModuleKeycloak extends WebModuleAbstract {
     @Override
     public Can<ServletContextListener> init(ServletContext ctx) throws ServletException {
 
+        String signInPath = isisConfiguration.getViewer().getWicket().getBasePath() + "signin";
+
         log.info("USUAL ORDER ADDED ONE MORE NEEE INSIDE Keycloak web module init...");
         registerFilter(ctx, KEYCLOAK_FILTER_NAME, KeycloakOIDCFilterWrapper.class)
                 .ifPresent(filterReg -> {
                     filterReg.addMappingForUrlPatterns(
                             null,
                             false, // filter is forced first
-                            "/wicket/signin","/keycloak/*");
+                            signInPath,"/keycloak/*");
                     filterReg.setInitParameter("keycloak.config.resolver", IsisKeycloakConfigResolver.class.getName());
 
                 });
